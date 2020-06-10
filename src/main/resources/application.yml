@@ -1,0 +1,17 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    appname: provider-service
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone:
+        http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+spring:
+  security:
+    user:
+      name: cwkj2020
+      password: cwkj2020
